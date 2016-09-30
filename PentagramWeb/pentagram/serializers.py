@@ -7,7 +7,7 @@ from pentagram.models import Photo,Comment,Likes
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model=User
-        fields=('id','username','password','email')
+        fields=('id','first_name','last_name','username','password','email')
 
     def create(self,validated_data):
         user=User.objects.create(**validated_data)
